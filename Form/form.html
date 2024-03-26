@@ -6,16 +6,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>freeCodeCamp Survey Form</h1>
-    <p>Thank you for taking the time to help us improve the platform</p>
-      <form>
+    <h1 id='title'>freeCodeCamp Survey Form</h1>
+    <p id='description'>Thank you for taking the time to help us improve the platform</p>
+      <form id='survey-form'>
         <fieldset>
-          <label for="first-name">Name <input id="first-name" name="first-name" type="text" placeholder="Enter your name" required /></label>
-          <label for="email">Email <input id="email" name="email" type="email" placeholder="Enter your Email" required /></label>
-          <label for="age">Age <input id="age" name="age" type="number" placeholder="Age" required /></label>
+          <label for="first-name" id='name-label'>Name <input id="name" name="first-name" type="text" placeholder="Enter your name" required /></label>
+          <label for="email" id='email-label'>Email <input id="email" name="email" type="email" placeholder="Enter your Email" required /></label>
+          <label for="number" id='number-label'>Age <input id="number" min='13' max='130' name="age" type="number" placeholder="Age" required /></label>
           <label for='role'>Which option best describes your current role?
-            <select id='role' name='role'>
-              <option value=''>Select current role</option>
+            <select id='dropdown' name='role'>
+              <option value='0'>Select current role</option>
               <option value='1'>Student</option>
               <option value='2'>Full Time Job</option>
               <option value='3'>Full Time Learner</option>
@@ -26,12 +26,12 @@
         </fieldset>
         <fieldset>
           <legend>Would you recommend freeCodeCamp to a friend?</legend>
-         <label for="definitely"><input id="definitely" type="radio" name="recommended" checked /> Definitely</label>
-         <label for="maybe"><input id="maybe" type="radio" name="recommended" /> Maybe</label>
-         <label for="not-sure"><input id="not-sure" type="radio" name="recommended" />Not sure</label>
+         <label for="definitely"><input id="definitely" type="radio" value='definitely' name="recommended" checked /> Definitely</label>
+         <label for="maybe"><input id="maybe" type="radio" value='maybe' name="recommended" /> Maybe</label>
+         <label for="not-sure"><input id="not-sure" type="radio" value='not-sure' name="recommended" />Not sure</label>
           <label for='favorite'>What is your favorite feature of freeCodeCamp?
               <select id='favorite' name='favorite'>
-                <option value=''>Select an option</option>
+                <option value='0'>Select an option</option>
                 <option value='1'>Challenges</option>
                 <option value='2'>Projects</option>
                 <option value='3'>Community</option>
@@ -67,7 +67,7 @@
         <label for="comment">Any comments or suggestions?
           <textarea id="comment" name="comment" placeholder='Enter your comment here...'></textarea>
       </fieldset>
-         
+         <input type='submit' id='submit' value='Submit'>
       </form>
  </body>
 </html>
